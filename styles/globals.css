@@ -22,3 +22,17 @@ body {
   color: #e7e8e8;
   background: #0f1318;
 }
+
+.equipcontainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.unequipbutton {
+  height: 20px !important;
+  padding: 5px !important;
+}
