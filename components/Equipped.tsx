@@ -1,7 +1,6 @@
 import { MediaRenderer, Web3Button, useAddress, useContract, useContractRead, useNFT } from "@thirdweb-dev/react";
 import { STAKING_ADDRESS, TOOLS_ADDRESS } from "../const/addresses";
 import { ethers } from "ethers";
-import styles from "../styles/Home.module.css";
 import { Text, Box, Card, Stack, Flex } from "@chakra-ui/react";
 
 interface EquippedProps {
@@ -25,7 +24,7 @@ export const Equipped = (props: EquippedProps) => {
     return (
         <Box>
             {nft && (
-                <Card className={styles.equipcontainer} p={5}>
+                <Card p={5}>
                     <Flex>
                         <Box>
                             <MediaRenderer
@@ -40,7 +39,6 @@ export const Equipped = (props: EquippedProps) => {
                             <Web3Button
                                 contractAddress={STAKING_ADDRESS}
                                 action={(contract) => contract.call("withdraw", [props.tokenId, 1])}
-                                className={styles.unequipbutton}
                             >Unequip</Web3Button>
                         </Stack>
                     </Flex>
